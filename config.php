@@ -19,7 +19,7 @@ $google_client->setRedirectUri('http://localhost/task4/google.php');
 $google_client->addScope('email');
 $google_client->addScope('profile');
 
-$host = 'localhost';
+$host = 'https://authdev.herokuapp.com/';
 $user = 'root';
 $password = '';
 $dbName = 'user';
