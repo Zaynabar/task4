@@ -1,0 +1,12 @@
+{
+    "name": "user/task4",
+    "authors": [
+        {
+            "name": "Ghost Rider",
+            "email": "krytou.n@gmail.com"
+        }
+    ],
+    "require": {
+        "google/apiclient": "2.0"
+    }
+}
