@@ -10,9 +10,13 @@ define('ID', '586393172492425');
 define('SECRET', 'a50840f11cb1f409cdb50516185fd14b');
 define('URL', 'https://authdev.herokuapp.com/task4/fb.php');
 
+
+// local 82478093931-fu006kfgm3fck92q3f5blgmrko3u44j1.apps.googleusercontent.com
+//       PVWh0Y0R7oPvWYj-EQATGRRL
+
 $google_client = new Google_Client();
-$google_client->setClientId('82478093931-fu006kfgm3fck92q3f5blgmrko3u44j1.apps.googleusercontent.com');
-$google_client->setClientSecret('PVWh0Y0R7oPvWYj-EQATGRRL');
+$google_client->setClientId('963788022481-lvothob8d4v2vcecqv2e5a04e0u43vjf.apps.googleusercontent.com');
+$google_client->setClientSecret('DMFji0G2pR9cFlBPGpJMDzch');
 $google_client->setRedirectUri('https://authdev.herokuapp.com/task4/google.php');
 
 
