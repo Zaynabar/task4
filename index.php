@@ -12,6 +12,7 @@ include 'config.php';
 
 <a href="<?php echo $google_client->createAuthUrl(); ?>" target="_blank">Login With Google</a>
 */
+echo '<a href="'.$google_client->createAuthUrl().'" target="_blank">Login With Google</a>';
 ?>
 <a href="https://www.facebook.com/v12.0/dialog/oauth?client_id=<?=ID?>&redirect_uri=<?=URL?>&response_type=code&scope=public_profile,email" target="_blank">Login with Facebook</a>
 <!DOCTYPE html>
