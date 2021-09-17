@@ -14,7 +14,7 @@ function showData($link) {
     <thead>
     <tr>
         <th><input type="checkbox" class="checkBoxPickAllFiltered"></th>
-        <th onclick="sortTable(0)" >Id<svg
+        <th class="id" >Id<svg
             version="1.1"
             id="Capa_1"
             xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,7 @@ function showData($link) {
             <g></g>
             <g></g>
           </svg></th>
-        <th onclick="sortTable(1)" >Name<svg
+        <th onclick="sortTable(1)" class="name" >Name<svg
             version="1.1"
             id="Capa_1"
             xmlns="http://www.w3.org/2000/svg"
@@ -174,7 +174,7 @@ function showData($link) {
             <g></g>
             <g></g>
           </svg></th>
-        <th onclick="sortTable(5)" class="status">Status<svg
+        <th class="status">Status<svg
             version="1.1"
             id="Capa_1"
             xmlns="http://www.w3.org/2000/svg"
