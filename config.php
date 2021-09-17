@@ -19,10 +19,21 @@ $google_client->setRedirectUri('http://localhost/task4/google.php');
 $google_client->addScope('email');
 $google_client->addScope('profile');
 
-$host = 'https://authdev.herokuapp.com/';
+/* //Connect using localhost
+$host = 'localhost';
 $user = 'root';
 $password = '';
 $dbName = 'user';
 
 $link = mysqli_connect($host, $user, $password, $dbName);
-mysqli_query($link, "SET NAMES 'utf8'");
+mysqli_query($link, "SET NAMES 'utf8'");*/
+
+$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$cleardb_server = $cleardb_url["host"];
+$cleardb_username = $cleardb_url["user"];
+$cleardb_password = $cleardb_url["pass"];
+$cleardb_db = substr($cleardb_url["path"], 1);
+$active_group = 'default';
+$query_builder = true;
+// Connect to DB
+$link = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
