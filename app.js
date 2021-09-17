@@ -44,3 +44,5 @@ const config = {
 };
 
 new Chart(ctx, config);
+
+

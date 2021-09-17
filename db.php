@@ -10,32 +10,220 @@ function showData($link) {
     $result = mysqli_query($link, $query) or die(mysqli_error($link));
     for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
 
-    $content = '<table id="Table">
+    $content = '<table class="table" id="Table">
+    <thead>
     <tr>
-        <th><input type="checkbox"></th>
-        <th onclick="sortTable(0)" >Id</th>
-        <th onclick="sortTable(1)" >Name</th>
-        <th onclick="sortTable(2)" >Social Network</th>
-        <th onclick="sortTable(3)" >First Data</th>
-        <th onclick="sortTable(4)" >Last Data</th>
-        <th onclick="sortTable(5)" >Status</th>
-    </tr>';
+        <th><input type="checkbox" class="checkBoxPickAllFiltered"></th>
+        <th onclick="sortTable(0)" >Id<svg
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 213.333 213.333"
+            style="enable-background: new 0 0 213.333 213.333"
+            xml:space="preserve"
+          >
+            <g>
+              <g>
+                <polygon points="0,53.333 106.667,160 213.333,53.333 		" />
+              </g>
+            </g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+          </svg></th>
+        <th onclick="sortTable(1)" >Name<svg
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 213.333 213.333"
+            style="enable-background: new 0 0 213.333 213.333"
+            xml:space="preserve"
+          >
+            <g>
+              <g>
+                <polygon points="0,53.333 106.667,160 213.333,53.333 		" />
+              </g>
+            </g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+          </svg></th>
+        <th onclick="sortTable(2)" class="social-network">Social Network<svg
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 213.333 213.333"
+            style="enable-background: new 0 0 213.333 213.333"
+            xml:space="preserve"
+          >
+            <g>
+              <g>
+                <polygon points="0,53.333 106.667,160 213.333,53.333 		" />
+              </g>
+            </g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+          </svg></th>
+        <th onclick="sortTable(3)" class="first-date">First Data<svg
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 213.333 213.333"
+            style="enable-background: new 0 0 213.333 213.333"
+            xml:space="preserve"
+          >
+            <g>
+              <g>
+                <polygon points="0,53.333 106.667,160 213.333,53.333 		" />
+              </g>
+            </g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+          </svg></th>
+        <th onclick="sortTable(4)" class="last-date">Last Data<svg
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 213.333 213.333"
+            style="enable-background: new 0 0 213.333 213.333"
+            xml:space="preserve"
+          >
+            <g>
+              <g>
+                <polygon points="0,53.333 106.667,160 213.333,53.333 		" />
+              </g>
+            </g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+          </svg></th>
+        <th onclick="sortTable(5)" class="status">Status<svg
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 213.333 213.333"
+            style="enable-background: new 0 0 213.333 213.333"
+            xml:space="preserve"
+          >
+            <g>
+              <g>
+                <polygon points="0,53.333 106.667,160 213.333,53.333 		" />
+              </g>
+            </g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+          </svg></th>
+    </tr></thead><tbody>';
 
     foreach ($data as $page) {
         $content .= "<tr>
-            <td><input type=\"checkbox\" name=\"check[]\" value=\"123\"></td>
-            <td>{$page['social_id']}</td>
-            <td>{$page['name']}</td>
-            <td>{$page['socialNet']}</td>
-            <td>{$page['firstTime']}</td>
-            <td>{$page['lastTime']}</td>
-            <td>{$page['status']}</td>
+          <td><input type='checkbox' name='check' class='userCheckbox' /></td>
+          <td class='userId'>{$page['social_id']}</td>
+          <td class='userName'>{$page['name']}</td>
+          <td>{$page['socialNet']}</td>
+          <td>{$page['firstTime']}</td>
+          <td class='lastDate'>{$page['lastTime']}</td>
+          <td>{$page['status']}</td>
         </tr>";
     }
-    $content .= '</table></form>';
+    $content .= '</tbody></table>';
 
     include 'layout.php';
 }
+
 
 function addData($link, $net) {
     $id = $_SESSION['id'];
