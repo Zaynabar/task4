@@ -2,10 +2,9 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="tableStyle.css?v=2">
+  <link rel="stylesheet" href="./tableStyle.css">
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
   <title>Task4</title>
-  <script src='./main.js' defer></script>
 </head>
 
 <body>
@@ -17,6 +16,7 @@
   <main>
     <?= $content ?>
   </main>
+  <script src='./main.js' defer></script>
 </body>
 
 </html>
