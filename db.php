@@ -206,7 +206,7 @@ function showData($link) {
             <g></g>
             <g></g>
           </svg></th>
-    </tr></thead><tbody>';
+    </tr></thead><tbody class="tableBody">';
 
     foreach ($data as $page) {
         $content .= "<tr>
