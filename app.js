@@ -5,6 +5,10 @@ const DATA_COUNT = 5;
 const DATA_COUNT2 = 52;
 /* я тут типо изменил что-то */
 
+/* я тут типо еще что-то изменил */
+const DATA_COUNT23 = 523;
+/* я тут типо еще что-то изменил */
+
 const NUMBER_CFG = { count: DATA_COUNT, min: 0, max: 100 };
 
 const data = {
