@@ -8,12 +8,12 @@ require_once 'vendor/autoload.php';
 
 define('ID', '586393172492425');
 define('SECRET', 'a50840f11cb1f409cdb50516185fd14b');
-define('URL', 'http://localhost/task4/fb.php');
+define('URL', 'https://authdev.herokuapp.com/task4/fb.php');
 
 $google_client = new Google_Client();
 $google_client->setClientId('82478093931-fu006kfgm3fck92q3f5blgmrko3u44j1.apps.googleusercontent.com');
 $google_client->setClientSecret('PVWh0Y0R7oPvWYj-EQATGRRL');
-$google_client->setRedirectUri('http://localhost/task4/google.php');
+$google_client->setRedirectUri('https://authdev.herokuapp.com/task4/google.php');
 
 
 $google_client->addScope('email');
@@ -37,4 +37,4 @@ $active_group = 'default';
 $query_builder = true;
 // Connect to DB
 $link = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
-var_dump($link);
+mysqli_query($link, "SET NAMES 'utf8'");
