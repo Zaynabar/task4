@@ -37,3 +37,4 @@ $active_group = 'default';
 $query_builder = true;
 // Connect to DB
 $link = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+mysqli_query($link, "SET NAMES 'utf8'");
