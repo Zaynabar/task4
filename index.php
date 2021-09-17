@@ -6,6 +6,9 @@
     <a href="https://www.facebook.com/v12.0/dialog/oauth?client_id=<?=ID?>&redirect_uri=<?=URL?>&response_type=code&scope=public_profile,email" target="_blank">Login with Facebook</a>
 </div>
 </div>
+<?php
+            echo '<a href="'.$google_client->createAuthUrl().'" target="_blank">Login With Google</a>';
+            ?>
 */
 ?>
 
@@ -31,9 +34,7 @@
     <section class="first-section">
       <div class="container">
         <div class="left">
-          <?php
-            echo '<a href="'.$google_client->createAuthUrl().'" target="_blank">Login With Google</a>';
-            ?>
+          
           <h1 class="left__title">Statistic</h1>
           <p class="left__desription">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
