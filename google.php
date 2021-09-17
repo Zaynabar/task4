@@ -5,7 +5,9 @@ $SocialNetwork = 'Google';
 
 
 if (isset($_GET["code"])) {
-    $token = $google_client->fetchAccessTokenWithAuthCode($_GET["code"]);
+    //$token = $google_client->fetchAccessTokenWithAuthCode($_GET["code"]);
+    $google_client->authenticate($_GET['code']);
+    $token = $google_client->getAccessToken();
 
     if (!isset($token['error'])) {
         $google_client->setAccessToken($token['access_token']);
