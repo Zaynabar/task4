@@ -8,7 +8,7 @@ require_once 'vendor/autoload.php';
 
 define('ID', '586393172492425');
 define('SECRET', 'a50840f11cb1f409cdb50516185fd14b');
-define('URL', 'https://authdev.herokuapp.com/task4/fb.php');
+define('URL', 'https://authdev.herokuapp.com/fb.php');
 
 
 // local 82478093931-fu006kfgm3fck92q3f5blgmrko3u44j1.apps.googleusercontent.com
