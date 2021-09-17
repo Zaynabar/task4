@@ -17,7 +17,7 @@ define('URL', 'https://authdev.herokuapp.com/fb.php');
 $google_client = new Google_Client();
 $google_client->setClientId('963788022481-lvothob8d4v2vcecqv2e5a04e0u43vjf.apps.googleusercontent.com');
 $google_client->setClientSecret('DMFji0G2pR9cFlBPGpJMDzch');
-$google_client->setRedirectUri('https://authdev.herokuapp.com/task4/google.php');
+$google_client->setRedirectUri('https://authdev.herokuapp.com/google.php');
 
 
 $google_client->addScope('email');
