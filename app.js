@@ -1,6 +1,10 @@
 const ctx = document.getElementById("myChart").getContext("2d");
 
 const DATA_COUNT = 5;
+/* я тут типо изменил что-то */
+const DATA_COUNT2 = 52;
+/* я тут типо изменил что-то */
+
 const NUMBER_CFG = { count: DATA_COUNT, min: 0, max: 100 };
 
 const data = {
