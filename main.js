@@ -15,7 +15,7 @@ const tBody = document.querySelector(".tableBody");
 const rows = tBody.querySelectorAll("tr");
 
 const statuses = ["active", "blocked"];
-const socialNetworks = ["facebook", "google"];
+const socialNetworks = ["Facebook", "Google"];
 const sortMethods = ["asc", "desc"];
 let currentFilteredStatus = statuses[0];
 let currentSortMethod = sortMethods[0];
