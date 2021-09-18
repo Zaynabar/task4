@@ -13,8 +13,8 @@ function showData($link) {
     $content = '    <div class="filters">
       <select name="socialNetwork" class="filterSocialNetwork">
         <option selected disabled>Выберите социальную сеть</option>
-        <option value="facebook">Facebook</option>
-        <option value="google">Google</option>
+        <option value="Facebook">Facebook</option>
+        <option value="Google">Google</option>
       </select>
       <select name="status" class="filterStatus">
         <option selected disabled>Выберите статус</option>
