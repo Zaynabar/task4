@@ -41,10 +41,6 @@ if (!empty($_GET['code'])) {
         $info = curl_exec($ch);
         curl_close($ch);
         $info = json_decode($info, true);
- 
-        if (!empty($info['id'])) {
-            print_r($info);
-        }
     }
 }
 
