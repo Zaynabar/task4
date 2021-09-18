@@ -57,7 +57,7 @@ function addData($link, $net) {
     $socialNetwork = $net;
     $firstTime = date("Y-m-d");
     $LastTime = date("Y-m-d");
-    $status = 'active';
+    $status = 'Active';
 
     $query = "INSERT INTO users (social_id, name, socialNet, firstTime, lastTime, status) 
             VALUES ('$id', '$name', '$socialNetwork', '$firstTime', '$LastTime', '$status')";
