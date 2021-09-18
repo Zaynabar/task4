@@ -9,8 +9,8 @@
 
 <body>
   <div id="sidebar">
-    <a href="block.php" role="button"><i class='bx bxs-lock-alt'></i></a>
-    <a href="#"><i class='bx bx-lock-open-alt'></i></a>
+    <a href="block.php"><i class='bx bxs-lock-alt'></i></a>
+    <a href="unblock.php"><i class='bx bx-lock-open-alt'></i></a>
     <a href="logout.php"><i class='bx bxs-minus-circle'></i></a>
   </div>
   <main>

@@ -69,7 +69,7 @@ function checkData($link) {
     $check = mysqli_query($link, "SELECT status FROM users WHERE social_id = '$id'");
     for ($data = []; $row = mysqli_fetch_assoc($check); $data[] = $row);
     foreach ($data as $file) {
-        if ($file['status'] == 'locked') {
+        if ($file['status'] == 'blocked') {
             $_SESSION['alert'] = 'alert';
             header('location:index.php');
             die();
