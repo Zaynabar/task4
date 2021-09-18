@@ -39,6 +39,6 @@ $cleardb_password = "8b51b605";
 $cleardb_db = substr("/heroku_8141e4d26c8623a", 1);
 $active_group = 'default';
 $query_builder = true;
-// Connect to DB
+
 $link = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 mysqli_query($link, "SET NAMES 'utf8'");

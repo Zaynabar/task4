@@ -1,9 +1,4 @@
 <?php
-
-if (!$_GET['code']) {
-    exit('error code');
-}
-
 include 'config.php';
 include 'db.php';
 
