@@ -46,7 +46,7 @@ function showData($link) {
             <g></g>
             <g></g>
           </svg></th>
-        <th onclick="sortTable(1)" class="name" >Name<svg
+        <th class="name" >Name<svg
             version="1.1"
             id="Capa_1"
             xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@ function showData($link) {
             <g></g>
             <g></g>
           </svg></th>
-        <th onclick="sortTable(2)" class="social-network">Social Network<svg
+        <th class="social-network">Social Network<svg
             version="1.1"
             id="Capa_1"
             xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +110,7 @@ function showData($link) {
             <g></g>
             <g></g>
           </svg></th>
-        <th onclick="sortTable(3)" class="first-date">First Data<svg
+        <th class="first-date">First Data<svg
             version="1.1"
             id="Capa_1"
             xmlns="http://www.w3.org/2000/svg"
@@ -142,7 +142,7 @@ function showData($link) {
             <g></g>
             <g></g>
           </svg></th>
-        <th onclick="sortTable(4)" class="last-date">Last Data<svg
+        <th class="last-date">Last Data<svg
             version="1.1"
             id="Capa_1"
             xmlns="http://www.w3.org/2000/svg"
