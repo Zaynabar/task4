@@ -21,7 +21,7 @@ $google_client->addScope('email');
 $google_client->addScope('profile');
 
 //Github auth
-$accessToken = $_SESSION['my_access_token'];
+//$accessToken = $_SESSION['my_access_token'];
 define('GITID', '44bba7d3add65d4185b4');
 define('GSECRET', '6d9f121700f938597e8df3d0175fa3b95778d1c2');
 define('GITURL', 'https://authdev.herokuapp.com/github.php');
