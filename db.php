@@ -10,202 +10,28 @@ function showData($link) {
     $result = mysqli_query($link, $query) or die(mysqli_error($link));
     for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
 
-    $content = '<table class="table" id="Table">
+    $content = '    <div class="filters">
+      <select name="socialNetwork" class="filterSocialNetwork">
+        <option selected disabled>Выберите социальную сеть</option>
+        <option value="facebook">Facebook</option>
+        <option value="google">Google</option>
+      </select>
+      <select name="status" class="filterStatus">
+        <option selected disabled>Выберите статус</option>
+        <option value="active">Active</option>
+        <option value="blocked">Blocked</option>
+      </select>
+      <button class="resetFilters">Скинуть фильтры</button>
+    </div><table class="table" id="Table">
     <thead>
     <tr>
         <th><input type="checkbox" class="checkBoxPickAllFiltered"></th>
-        <th class="id" >Id<svg
-            version="1.1"
-            id="Capa_1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px"
-            y="0px"
-            viewBox="0 0 213.333 213.333"
-            style="enable-background: new 0 0 213.333 213.333"
-            xml:space="preserve"
-          >
-            <g>
-              <g>
-                <polygon points="0,53.333 106.667,160 213.333,53.333 		" />
-              </g>
-            </g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-          </svg></th>
-        <th class="name" >Name<svg
-            version="1.1"
-            id="Capa_1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px"
-            y="0px"
-            viewBox="0 0 213.333 213.333"
-            style="enable-background: new 0 0 213.333 213.333"
-            xml:space="preserve"
-          >
-            <g>
-              <g>
-                <polygon points="0,53.333 106.667,160 213.333,53.333 		" />
-              </g>
-            </g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-          </svg></th>
-        <th class="social-network">Social Network<svg
-            version="1.1"
-            id="Capa_1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px"
-            y="0px"
-            viewBox="0 0 213.333 213.333"
-            style="enable-background: new 0 0 213.333 213.333"
-            xml:space="preserve"
-          >
-            <g>
-              <g>
-                <polygon points="0,53.333 106.667,160 213.333,53.333 		" />
-              </g>
-            </g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-          </svg></th>
-        <th class="first-date">First Data<svg
-            version="1.1"
-            id="Capa_1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px"
-            y="0px"
-            viewBox="0 0 213.333 213.333"
-            style="enable-background: new 0 0 213.333 213.333"
-            xml:space="preserve"
-          >
-            <g>
-              <g>
-                <polygon points="0,53.333 106.667,160 213.333,53.333 		" />
-              </g>
-            </g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-          </svg></th>
-        <th class="last-date">Last Data<svg
-            version="1.1"
-            id="Capa_1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px"
-            y="0px"
-            viewBox="0 0 213.333 213.333"
-            style="enable-background: new 0 0 213.333 213.333"
-            xml:space="preserve"
-          >
-            <g>
-              <g>
-                <polygon points="0,53.333 106.667,160 213.333,53.333 		" />
-              </g>
-            </g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-          </svg></th>
-        <th class="status">Status<svg
-            version="1.1"
-            id="Capa_1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px"
-            y="0px"
-            viewBox="0 0 213.333 213.333"
-            style="enable-background: new 0 0 213.333 213.333"
-            xml:space="preserve"
-          >
-            <g>
-              <g>
-                <polygon points="0,53.333 106.667,160 213.333,53.333 		" />
-              </g>
-            </g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-          </svg></th>
+        <th class="id" >Id<img src="./down-arrow.svg" /></th>
+        <th class="name" >Name<img src="./down-arrow.svg" /></th>
+        <th class="social-network">Social Network<img src="./down-arrow.svg" /></th>
+        <th class="first-date">First Data<img src="./down-arrow.svg" /></th>
+        <th class="last-date">Last Data<img src="./down-arrow.svg" /></th>
+        <th class="status">Status<img src="./down-arrow.svg" /></th>
     </tr></thead><tbody class="tableBody">';
 
     foreach ($data as $page) {

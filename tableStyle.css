@@ -1,6 +1,6 @@
-
 .table {
 	width: 100%;
+    max-width: 900px;
 	margin-bottom: 20px;
 	border: 1px solid #dddddd;
 	border-collapse: collapse; 
@@ -14,16 +14,29 @@
     user-select: none;
 }
 
-.table th svg {
+.table th img {
     display: inline-block;
     width: 15px;
     margin-left: 5px;
     transition: all .3s;
 }
-.table th.active svg {
+.table th.active img {
     transform: rotate(180deg);
 }
 .table td {
 	border: 1px solid #dddddd;
 	padding: 5px;
+}
+.filters {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+}
+.resetFilters {
+    padding: 5px;
+    background: #efefef;
+    font-size: 16px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
 }

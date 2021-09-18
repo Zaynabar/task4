@@ -6,13 +6,21 @@ const socialNetworkSortBtn = document.querySelector(".social-network");
 const firsDateSortBtn = document.querySelector(".first-date");
 const lastDateSortBtn = document.querySelector(".last-date");
 const checkboxAll = document.querySelector(".checkBoxPickAllFiltered");
+const filterSN = document.querySelector(".filterSocialNetwork");
+const filterStatus = document.querySelector(".filterStatus");
+const resetFiltersBtn = document.querySelector(".resetFilters");
+
 const table = document.querySelector(".table");
 const tBody = document.querySelector(".tableBody");
 const rows = tBody.querySelectorAll("tr");
+
 const statuses = ["active", "blocked"];
+const socialNetworks = ["facebook", "google"];
 const sortMethods = ["asc", "desc"];
 let currentFilteredStatus = statuses[0];
 let currentSortMethod = sortMethods[0];
+
+let allTableRows = [];
 
 statusSortBtn.onclick = function () {
   currentFilteredStatus =
@@ -55,15 +63,10 @@ socialNetworkSortBtn.addEventListener("click", (e) => sortTable(e, 3));
 const sortByRow = (e, id) => {
   e.target.classList.toggle("active");
 
-  const rowsForSort = table.rows;
   const sortedArray = [];
   const sortedRows = [];
 
-  for (let row of rowsForSort) {
-    if (row !== table.rows[0]) {
-      sortedArray.push(row);
-    }
-  }
+  selectAllRows(sortedArray);
 
   tBody.innerText = "";
   sortedArray.forEach((row) => {
@@ -100,6 +103,16 @@ const disableAllInputs = () => {
   tBody.querySelectorAll(".userCheckbox").forEach((checkbox) => {
     checkbox.checked = false;
   });
+};
+
+const selectAllRows = (array) => {
+  const rowsForSort = table.rows;
+  for (let row of rowsForSort) {
+    if (row !== table.rows[0]) {
+      array.push(row);
+    }
+  }
+  return array;
 };
 
 const sortTableRender = (element) => {
@@ -152,3 +165,30 @@ function sortTable(e, n) {
     }
   }
 }
+
+selectAllRows(allTableRows);
+
+const filterRows = (e, filterOption, childRowIndex) => {
+  if (
+    !(statuses.includes(filterOption) || socialNetworks.includes(filterOption))
+  )
+    return;
+  resetFiltersBtn.click();
+  currentFilteredStatus = filterOption;
+  e.target.setAttribute("data-sort", currentFilteredStatus);
+  rows.forEach((row) => {
+    const child = row.children[childRowIndex];
+    if (child.innerText !== currentFilteredStatus) {
+      row.remove();
+    }
+  });
+};
+
+filterSN.onclick = (e) => {
+  filterRows(e, e.target.value, 3);
+};
+filterStatus.onclick = (e) => {
+  filterRows(e, e.target.value, 6);
+};
+resetFiltersBtn.onclick = () =>
+  allTableRows.forEach((row) => sortTableRender(row));
