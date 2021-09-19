@@ -51,20 +51,20 @@ function showData($link)
         </tr>";
   }
   $content .= '</tbody></table>';
-  function setSessionUserId($userId)
-  {
-    var_dump($_SESSION['id']);
-    var_dump('================');
-    var_dump($userId);
-    $_SESSION['id'] = $userId;
-    var_dump('================');
 
-    var_dump($_SESSION['id']);
-  }
   include 'layout.php';
 }
 
+function setSessionUserId($userId)
+{
+  var_dump($_SESSION['id']);
+  var_dump('================');
+  var_dump($userId);
+  $_SESSION['id'] = $userId;
+  var_dump('================');
 
+  var_dump($_SESSION['id']);
+}
 
 function addData($link, $net)
 {
