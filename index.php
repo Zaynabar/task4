@@ -34,6 +34,11 @@ $url = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build_query
       <div class="container">
         <div class="left">
         <?php
+          if ($_SESSION['alert'] == 'alert') {
+            echo '<div class="alert alert-secondary" role="alert">
+            This is a secondary alert—check it out!
+            </div>';
+          }
           echo '<a href="' . $url . '">Login with Google</a>'.'<br>';
         ?>
         <a href="https://www.facebook.com/v12.0/dialog/oauth?client_id=<?=ID?>&redirect_uri=<?=URL?>&response_type=code&scope=public_profile,email" target="_blank">Login with Facebook</a><br />
