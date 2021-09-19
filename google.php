@@ -5,9 +5,9 @@ $SocialNetwork = 'Google';
 
 if (!empty($_GET['code'])) {
     $params = array(
-        'client_id'     => '963788022481-elled9r3fgmbcnu90ttg9du69jnufv32.apps.googleusercontent.com',
-        'client_secret' => 'gFjjCaQDyCzJzn2DYulz7RDk',
-        'redirect_uri'  => 'https://authdev.herokuapp.com/google.php',
+        'client_id'     => GOOGLE_ID,
+        'client_secret' => GOOGLE_SECRET,
+        'redirect_uri'  => GOOGLE_URL,
         'grant_type'    => 'authorization_code',
         'code'          => $_GET['code']
     );
@@ -33,7 +33,6 @@ if (!empty($_GET['code'])) {
 
         $info = file_get_contents('https://www.googleapis.com/oauth2/v1/userinfo?' . urldecode(http_build_query($params)));
         $info = json_decode($info, true);
-        print_r($info);
     }
 }
 
