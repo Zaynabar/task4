@@ -3,7 +3,16 @@ include 'config.php';
 
 /*<a href="https://accounts.google.com/o/oauth2/auth?client_id=<?=$params['client_id']?>&redirect_uri=<?=$params['redirect_uri']?>&response_type=code&scope=profile" target="_blank">Login with Google</a>
 */
-echo '<a href="'.$google_client->createAuthUrl().'" target="_blank">Login With Google</a>';
+$params = array(
+  'client_id'     => '963788022481-elled9r3fgmbcnu90ttg9du69jnufv32.apps.googleusercontent.com',
+  'redirect_uri'  => 'https://authdev.herokuapp.com/google.php',
+  'response_type' => 'code',
+  'scope'         => 'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile',
+  'state'         => '123'
+);
+
+$url = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build_query($params));
+echo '<a href="' . $url . '">Авторизация через Google</a>';
 ?>
 
 <br />

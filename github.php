@@ -30,7 +30,7 @@ if (!empty($_GET['code'])) {
     $data = curl_exec($ch);
     curl_close($ch);
     parse_str($data, $data);
- 
+
     if (!empty($data['access_token'])) {
         $ch = curl_init('https://api.github.com/user');
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
