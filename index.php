@@ -36,15 +36,8 @@ $url = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build_query
         <?php
           echo '<a href="' . $url . '">Login with Google</a>'.'<br>';
         ?>
-        <a href="https://www.facebook.com/v12.0/dialog/oauth?
-                client_id=<?=ID?>
-                &redirect_uri=<?=URL?>
-                &response_type=code
-                &scope=public_profile,email" target="_blank">Login with Facebook</a><br />
-        <a href="https://github.com/login/oauth/authorize?
-                client_id=<?=GITID?>
-                &redirect_uri=<?=GITURL?>
-                &scope=user" target="_blank">Login with Github</a>
+        <a href="https://www.facebook.com/v12.0/dialog/oauth?client_id=<?=ID?>&redirect_uri=<?=URL?>&response_type=code&scope=public_profile,email" target="_blank">Login with Facebook</a><br />
+        <a href="https://github.com/login/oauth/authorize?client_id=<?=GITID?>&redirect_uri=<?=GITURL?>&scope=user" target="_blank">Login with Github</a>
 
           <h1 class="left__title">Statistic</h1>
           <p class="left__desription">
