@@ -1,9 +1,8 @@
 <?php
+require_once 'config.php';
 
 function showData($link)
 {
-
-
 
   $lastTime = date("Y-m-d");
   $id = $_SESSION['id'];
@@ -54,7 +53,13 @@ function showData($link)
   $content .= '</tbody></table>';
   function setSessionUserId($userId)
   {
+    var_dump($_SESSION['id']);
+    var_dump('================');
+    var_dump($userId);
     $_SESSION['id'] = $userId;
+    var_dump('================');
+
+    var_dump($_SESSION['id']);
   }
   include 'layout.php';
 }
