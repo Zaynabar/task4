@@ -15,6 +15,7 @@ function showData($link) {
         <option selected disabled>Выберите социальную сеть</option>
         <option value="Facebook">Facebook</option>
         <option value="Google">Google</option>
+        <option value="Github">Github</option>
       </select>
       <select name="status" class="filterStatus">
         <option selected disabled>Выберите статус</option>
