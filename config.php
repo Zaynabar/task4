@@ -9,25 +9,13 @@ define('ID', '586393172492425');
 define('SECRET', 'a50840f11cb1f409cdb50516185fd14b');
 define('URL', 'https://authdev.herokuapp.com/fb.php');
 
-// local 82478093931-fu006kfgm3fck92q3f5blgmrko3u44j1.apps.googleusercontent.com
-//       PVWh0Y0R7oPvWYj-EQATGRRL
-/*
-$google_client = new Google_Client();
-$google_client->setClientId('963788022481-lvothob8d4v2vcecqv2e5a04e0u43vjf.apps.googleusercontent.com');
-$google_client->setClientSecret('DMFji0G2pR9cFlBPGpJMDzch');
-$google_client->setRedirectUri('https://authdev.herokuapp.com/google.php');
-
-$google_client->addScope('email');
-$google_client->addScope('profile');*/
-
+//Google auth
 $params = array(
     'client_id'     => '963788022481-lvothob8d4v2vcecqv2e5a04e0u43vjf.apps.googleusercontent.com',
     'client_secret' => 'DMFji0G2pR9cFlBPGpJMDzch',
     'redirect_uri'  => 'https://authdev.herokuapp.com/google.php',
-    'grant_type'    => 'authorization_code',
-    'code'          => $_GET['code']
+    'grant_type'    => 'authorization_code'
 );
-
 
 //Github auth
 define('GITID', '44bba7d3add65d4185b4');

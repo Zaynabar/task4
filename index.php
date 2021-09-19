@@ -1,10 +1,9 @@
 <?php
 include 'config.php';
-/*
-echo '<a href="'.$google_client->createAuthUrl().'" target="_blank">Login With Google</a>';
-*/
-echo '<a href="'.$google_client->createAuthUrl().'" target="_blank">Login With Google</a>'.'<br>';
 ?>
+
+<a href="https://accounts.google.com/o/oauth2/auth?client_id=<?=$params['client_id']?>&redirect_uri=<?=$params['redirect_uri']?>&response_type=code&scope=profile" target="_blank">Login with Google</a>
+<br />
 <a href="https://www.facebook.com/v12.0/dialog/oauth?client_id=<?=ID?>&redirect_uri=<?=URL?>&response_type=code&scope=public_profile,email" target="_blank">Login with Facebook</a>
 <br />
 <a href="https://github.com/login/oauth/authorize?client_id=<?=GITID?>&redirect_uri=<?=GITURL?>&scope=user" target="_blank">Login with Github</a>
