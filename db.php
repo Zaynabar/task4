@@ -41,7 +41,7 @@ function showData($link)
 
   foreach ($data as $page) {
     $content .= "<tr>
-          <td><input onchange='setSessionUserId({$page['social_id']})' type='checkbox' name='check' class='userCheckbox' /></td>
+          <td><input type='checkbox' name='check' class='userCheckbox' /></td>
           <td class='userId'>{$page['social_id']}</td>
           <td class='userName'>{$page['name']}</td>
           <td>{$page['socialNet']}</td>
@@ -53,17 +53,6 @@ function showData($link)
   $content .= '</tbody></table>';
 
   include 'layout.php';
-}
-
-function setSessionUserId($userId)
-{
-  var_dump($_SESSION['id']);
-  var_dump('================');
-  var_dump($userId);
-  $_SESSION['id'] = $userId;
-  var_dump('================');
-
-  var_dump($_SESSION['id']);
 }
 
 function addData($link, $net)
