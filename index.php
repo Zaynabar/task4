@@ -36,7 +36,7 @@ $url = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build_query
         <?php
           if ($_SESSION['alert'] == 'alert') {
             echo '<div class="alert alert-secondary" role="alert">
-            This is a secondary alert—check it out!
+            This account is blocked.
             </div>';
           }
           echo '<a href="' . $url . '">Login with Google</a>'.'<br>';
