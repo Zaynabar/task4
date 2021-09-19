@@ -4,6 +4,14 @@ include 'db.php';
 $SocialNetwork = 'Google';
 
 if (!empty($_GET['code'])) {
+    $params = array(
+        'client_id'     => '963788022481-elled9r3fgmbcnu90ttg9du69jnufv32.apps.googleusercontent.com',
+        'client_secret' => 'gFjjCaQDyCzJzn2DYulz7RDk',
+        'redirect_uri'  => 'https://authdev.herokuapp.com/google.php',
+        'grant_type'    => 'authorization_code',
+        'code'          => $_GET['code']
+    );
+
     $ch = curl_init('https://accounts.google.com/o/oauth2/token');
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, urldecode(http_build_query($params)));
@@ -38,6 +46,6 @@ if (!(mysqli_num_rows($add) > 0)) {
     addData($link, $SocialNetwork);
 }
 
-//checkData($link);
+checkData($link);
 
 showData($link);
