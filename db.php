@@ -1,6 +1,9 @@
 <?php
 
 function showData($link) {
+
+    
+     
     $lastTime = date("Y-m-d");
     $id = $_SESSION['id'];
     $query = "UPDATE users SET lastTime = '$lastTime' WHERE social_id = '$id'";
@@ -38,7 +41,7 @@ function showData($link) {
 
     foreach ($data as $page) {
         $content .= "<tr>
-          <td><input type='checkbox' name='check' class='userCheckbox' /></td>
+          <td><input onclick='setSessionUserId({$page['social_id']})' type='checkbox' name='check' class='userCheckbox' /></td>
           <td class='userId'>{$page['social_id']}</td>
           <td class='userName'>{$page['name']}</td>
           <td>{$page['socialNet']}</td>
@@ -52,6 +55,9 @@ function showData($link) {
     include 'layout.php';
 }
 
+function setSessionUserId($userId) {
+ $_SESSION['id'] = $userId;
+}
 
 function addData($link, $net) {
     $id = $_SESSION['id'];
