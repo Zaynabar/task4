@@ -34,10 +34,11 @@ $url = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build_query
       <div class="container">
         <div class="left">
         <?php
-          if ($_SESSION['alert'] == 'alert') {
+          if (!empty($_SESSION['alert']) && $_SESSION['alert'] == 'alert') {
             echo '<div class="alert alert-secondary" role="alert">
             This account is blocked.
             </div>';
+            session_destroy();
           }
           echo '<a href="' . $url . '">Login with Google</a>'.'<br>';
         ?>
