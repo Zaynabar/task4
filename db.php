@@ -41,7 +41,7 @@ function showData($link)
 
   foreach ($data as $page) {
     $content .= "<tr>
-          <td><input onclick='setSessionUserId({$page['social_id']})' type='checkbox' name='check' class='userCheckbox' /></td>
+          <td><input onchange='setSessionUserId({$page['social_id']})' type='checkbox' name='check' class='userCheckbox' /></td>
           <td class='userId'>{$page['social_id']}</td>
           <td class='userName'>{$page['name']}</td>
           <td>{$page['socialNet']}</td>
