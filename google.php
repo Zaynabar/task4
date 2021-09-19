@@ -66,6 +66,6 @@ if (!(mysqli_num_rows($add) > 0)) {
     addData($link, $SocialNetwork);
 }
 
-checkData($link);
+//checkData($link);
 
 showData($link);
