@@ -40,7 +40,6 @@ if (!empty($_GET['code'])) {
     curl_setopt($ch, CURLOPT_HEADER, false);
     $data = curl_exec($ch);
     curl_close($ch);
-    //parse_str($data, $data);
 
     $data = json_decode($data, true);
  

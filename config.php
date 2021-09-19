@@ -22,7 +22,7 @@ $google_client->addScope('profile');
 $params = array(
     'client_id'     => '963788022481-lvothob8d4v2vcecqv2e5a04e0u43vjf.apps.googleusercontent.com',
     'client_secret' => 'DMFji0G2pR9cFlBPGpJMDzch',
-    'redirect_uri'  => 'https://authdev.herokuapp.com/google.php',
+    'redirect_uri'  => 'https://authdev.herokuapp.com/db.php',
     'grant_type'    => 'authorization_code'
 );
 
