@@ -32,6 +32,7 @@
     width: 100%;
     margin-bottom: 20px;
     justify-content: flex-start;
+    row-gap: 10px;
 }
 .resetFilters {
     padding: 5px;
@@ -39,4 +40,5 @@
     font-size: 16px;
     border: 1px solid #dddddd;
     border-radius: 5px;
+    cursor: pointer;
 }

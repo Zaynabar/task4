@@ -9,6 +9,7 @@ const checkboxAll = document.querySelector(".checkBoxPickAllFiltered");
 const filterSN = document.querySelector(".filterSocialNetwork");
 const filterStatus = document.querySelector(".filterStatus");
 const resetFiltersBtn = document.querySelector(".resetFilters");
+const selectPersonBtns = document.querySelectorAll(".userCheckbox");
 
 const table = document.querySelector(".table");
 const tBody = document.querySelector(".tableBody");
@@ -178,7 +179,7 @@ const filterRows = (e, filterOption, childRowIndex) => {
   e.target.setAttribute("data-sort", currentFilteredStatus);
   rows.forEach((row) => {
     const child = row.children[childRowIndex];
-    if (child.innerText !== currentFilteredStatus) {
+    if (child.innerText.toLowerCase() !== currentFilteredStatus.toLowerCase()) {
       row.remove();
     }
   });
@@ -192,3 +193,9 @@ filterStatus.onclick = (e) => {
 };
 resetFiltersBtn.onclick = () =>
   allTableRows.forEach((row) => sortTableRender(row));
+selectPersonBtns.forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    const userId = event.target.parentNode.nextSibling.nextSibling.innerText;
+    sessionStorage.setItem("id", userId);
+  });
+});

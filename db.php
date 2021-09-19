@@ -10,7 +10,8 @@ function showData($link) {
     $result = mysqli_query($link, $query) or die(mysqli_error($link));
     for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
 
-    $content = '    <div class="filters">
+    $content = '    
+    <div class="filters">
       <select name="socialNetwork" class="filterSocialNetwork">
         <option selected disabled>Выберите социальную сеть</option>
         <option value="Facebook">Facebook</option>
