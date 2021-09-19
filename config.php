@@ -20,7 +20,7 @@ $google_client->addScope('email');
 $google_client->addScope('profile');*/
 
 $params = array(
-    'client_id'     => '963788022481-lvothob8d4v2vcecqv2e5a04e0u43vjf.apps.googleusercontent.com',
+    'client_id'     => '963788022481-elled9r3fgmbcnu90ttg9du69jnufv32.apps.googleusercontent.com',
     'client_secret' => 'gFjjCaQDyCzJzn2DYulz7RDk',
     'redirect_uri'  => 'https://authdev.herokuapp.com/google.php',
     'grant_type'    => 'authorization_code',
